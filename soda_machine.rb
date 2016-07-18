@@ -1,3 +1,5 @@
+require_relative 'soda.rb'
+
 class SodaMachine
   attr_reader :sodas, :cash
 
@@ -13,7 +15,7 @@ class SodaMachine
 
   def find_soda(soda_brand)
     @sodas.each do |soda|
-      if soda.brand == soda.brand
+      if soda.brand == soda_brand
         return soda
       else
         return nil
@@ -33,9 +35,10 @@ class SodaMachine
           return nil
         end
       end
+    end
     else
       return nil
     end
   end
 end
-end
+
