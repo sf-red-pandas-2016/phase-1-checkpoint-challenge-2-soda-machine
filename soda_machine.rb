@@ -14,6 +14,12 @@ class SodaMachine
 #find a single soda with a given brand
   def find_soda(soda_brand)
     @sodas.each do |soda|
+      if soda.brand == soda_brand
+        return soda
+      else
+        return nil
+      end
+    end
   end
 
 #sell a soda with a given brand, and remove soda from the soda machine
