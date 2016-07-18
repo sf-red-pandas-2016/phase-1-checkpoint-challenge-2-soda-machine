@@ -6,27 +6,36 @@ class SodaMachine
     @cash = args[:cash]
   end
 
-  def self.current_inventory_count
+  def current_inventory_count
     return @sodas.count
 
   end
 
   def find_soda(soda_brand)
     @sodas.each do |soda|
-      it soda.brand == soda.bring
+      if soda.brand == soda.brand
         return soda
       else
         return nil
       end
     end
 
-  end
-
   def sell(soda_brand)
-    #
+    if @sodas.include(soda_brand) == false
+      return nil
+    else
+      @sodas.each do |drink|
+        if drink.brand == soda_brand
+          @cash += drink.price
+          @sodas.delete(drink)
+          @cash
+        else
+          return nil
+        end
+      end
+    else
+      return nil
+    end
   end
-
 end
-
-
-d.find_soda(pepsi)
+end
