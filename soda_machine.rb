@@ -1,3 +1,4 @@
+
 class SodaMachine
   attr_reader :sodas, :cash
 
@@ -7,12 +8,32 @@ class SodaMachine
   end
 
   def current_inventory_count
+    @sodas.count
   end
 
   def find_soda(soda_brand)
+
+    @sodas.each do |soda|
+      if soda.brand == soda_brand
+        return soda
+      end
+      return nil
+    end
+
   end
+
 
   def sell(soda_brand)
-  end
+    @sodas.each do |soda|
+      if soda.brand == soda_brand
 
+        @cash += soda.price
+        @sodas.delete(soda)
+        @cash
+      end
+
+    end
+    return nil
+  end
 end
+
