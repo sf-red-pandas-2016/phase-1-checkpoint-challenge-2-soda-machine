@@ -38,12 +38,18 @@ class SodaMachine
   end
 
 
-##### ATTEMPT AT REFACTORING #######
+##### ATTEMPT AT REFACTORING ####### NOT WORKING
+
   # def sell(soda_brand)
-  #   return nil if find_soda(soda_brand) == nil
-  #   sold_soda = find_soda(soda_brand)
+  #   if find_soda(soda_brand)
   #     @cash += soda.price
   #     @sodas.delete(soda)
+  #   end
+
+    # return nil if find_soda(soda_brand) == nil
+    # sold_soda = find_soda(soda_brand)
+    #   @cash += soda.price
+    #   @sodas.delete(soda)
   # end
 
 
