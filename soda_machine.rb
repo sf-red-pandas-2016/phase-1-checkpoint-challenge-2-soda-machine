@@ -18,9 +18,8 @@ class SodaMachine
     if find_soda(soda_brand)
       a=find_soda(soda_brand)
       @cash +=a.price
-      @sodas.delete_if{|x|x.brand==soda_brand}
-    else
-      return nil
+      @sodas.delete(a)
+    
     end
   end
 
