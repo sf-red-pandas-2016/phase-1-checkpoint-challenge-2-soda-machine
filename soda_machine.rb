@@ -37,5 +37,15 @@ class SodaMachine
     return nil
   end
 
+
+##### ATTEMPT AT REFACTORING #######
+  # def sell(soda_brand)
+  #   return nil if find_soda(soda_brand) == nil
+  #   sold_soda = find_soda(soda_brand)
+  #     @cash += soda.price
+  #     @sodas.delete(soda)
+  # end
+
+
 end
 
