@@ -25,8 +25,9 @@ class SodaMachine
   def sell(soda_brand)
     @sodas.each do |soda|
       if soda.brand == soda_brand
+        @sodas.delete(soda)
         return @cash += soda.price
-        soda.delete
+
       end
     end
     if @sodas.none? { |soda| soda.brand == soda_brand}
