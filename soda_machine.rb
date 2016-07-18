@@ -34,7 +34,7 @@ class SodaMachine
       #   return nil
       end
     end
-    @sodas
+    return nil
   end
 
 end
