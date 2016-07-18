@@ -1,3 +1,5 @@
+require_relative 'soda'
+
 class SodaMachine
 
   attr_accessor :cash, :sodas
@@ -30,11 +32,10 @@ class SodaMachine
       if soda.brand == soda_brand
         @cash += soda.price
         @sodas.delete(soda)
-      # else
-      #   return nil
       end
     end
     return nil
   end
 
 end
+
