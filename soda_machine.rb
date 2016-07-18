@@ -1,3 +1,4 @@
+require_relative 'soda.rb'
 class SodaMachine
   attr_reader :sodas, :cash, :soda_machine
 
@@ -18,16 +19,17 @@ class SodaMachine
 
   def find_soda(soda_brand)
     @sodas.each do |x|
-    if @sodas.brand == soda_brand
-       return @sodas[:brand]
-    else
-       return nil
+    if x.brand == soda_brand
+       return x
     end
+  end
+    return nil
   end
 
   def sell(soda_brand)
     sodas.each { |k,v| p v }
     soda_brand.price
   end
+
 
 end
