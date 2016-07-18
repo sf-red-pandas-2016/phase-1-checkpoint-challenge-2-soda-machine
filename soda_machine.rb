@@ -1,5 +1,5 @@
 class SodaMachine
-  attr_reader :sodas, :cash, :price
+  attr_reader :sodas, :cash
 
   def initialize(args = {})
     @sodas = args[:sodas]
