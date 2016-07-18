@@ -17,7 +17,7 @@ class SodaMachine
   end
 
   def sell(soda_brand)
-      if sodas.include?(soda_brand)
+      if soda.brand == soda_brand
         cash << soda.price
       end
   end
