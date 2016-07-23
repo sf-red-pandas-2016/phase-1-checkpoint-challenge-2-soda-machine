@@ -1,5 +1,6 @@
 require_relative "spec_helper"
 
+
 describe SodaMachine do
   let (:pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
   let (:mountain_dew) { Soda.new(brand: 'Mountain Dew', price: 0.75) }
